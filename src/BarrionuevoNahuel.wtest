@@ -1,0 +1,25 @@
+import Remeras.*
+import Empresa.*
+
+describe "Creo objectos"{
+	const remera1 = new RemeraLisa (color = negro, talle = 35)
+	const remera2 = new RemeraLisa (color = 'azul', talle = 37)
+	const remera3 = new RemeraBordeada(cantColores = 5, talle = 42)
+	const remera4 = new RemeraBordeada(cantColores = 3, talle = 44)
+	const remera5 = new RemeraSublimada (alto = 4, ancho = 2, costoPorDerechoAutor = 10, talle = 33)
+	const remera6 = new RemeraSublimada(alto = 3, ancho = 4, talle = 38)
+	
+	/*fixture {
+		
+	}*/
+	
+	test "Verificar Costos"
+	{
+		assert.equals(80, remera1.costo())
+		assert.equals(88, remera2.costo())
+		assert.equals(150, remera3.costo())
+		assert.equals(88, remera4.costo())
+	}
+	}
+	
+ 
