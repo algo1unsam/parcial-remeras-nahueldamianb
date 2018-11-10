@@ -17,7 +17,7 @@ object empresa {
 	}
 	//3
 	method totalSucursal(unaSucursal){
-		pedidos.sum({unp => unp.sucursal() == unaSucursal})
+		pedidos.sum({unp => unp.sucursal() == unaSucursal}) // TODO sum espera un bloque numérico, este es booleano
 	}
 	//4
 	method sucursalMasFacuturo(){

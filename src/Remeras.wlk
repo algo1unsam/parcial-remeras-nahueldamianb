@@ -27,10 +27,10 @@ class RemeraLisa inherits Remera {
 
 	var property color
 
-	method costo() {
-		if (color == negro or color == blanco or color == gris) {
+	method costo() { // TODO Esta lógica debería usarse para todas las remeras, no sólo las lisas.
+		if (color == negro or color == blanco or color == gris) { // TODO Podría usar una colección.
 			return self.costoGeneral()
-		} else return self.costoGeneral() + self.costoGeneral() / 10
+		} else return self.costoGeneral() + self.costoGeneral() / 10 // TODO mejor * 1.1
 	}
 
 }
@@ -40,11 +40,11 @@ class RemeraBordeada inherits Remera {
 	var property cantColores
 
 	method costoBordeado() {
-		return cantColores * 10
+		return cantColores * 10 // TODO No implementa el mínimo de colores.
 	}
 
 	method costo() {
-		return self.costoGeneral() + self.costoBordeado()
+		return self.costoGeneral() + self.costoBordeado() 
 	}
 
 }
